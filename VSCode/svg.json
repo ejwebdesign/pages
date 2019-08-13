@@ -1,0 +1,392 @@
+{
+	//SVG//
+		"ejSVG": {
+			"prefix": "ejSVG",
+			"body": [
+				"<svg viewBox=\"0 0 ${1:100 100}\"$2 xmlns=\"http://www.w3.org/2000/svg\"> ",
+				"",
+				"  <style>",
+				"    ${3:#rec}{",
+				"      fill: ${4:red};",
+				"      stroke: ${5:black};",
+				"      stroke-width: ${6:1%};",
+				"    }",
+				"  </style>",		  
+				"</svg>"
+			],
+			"description": "ejSVG"
+		},
+	
+	//SVG Elements//	  
+		"ejPath": {
+			"prefix": "ejPath",
+			"body": [
+			  "<path id=\"${1:p1}\" d=\"M ${2:10 10} L ${4:50 10}\" filter=\"$5\">$6",
+			  "</path>$7"
+			],
+			"description": "ejPath"
+		},
+	
+		"ejLine": {
+			"prefix": "ejLine",
+			"body": [
+				"<line id=\"${1:l1}\" x1=\"${2:10}\" y1=\"${3:10}\" x2=\"${4:50}\" y2=\"${5:25}\" filter=\"$6\">$7",
+				"</line>$8"
+			],
+			"description": "ejLine"
+		},
+	
+		"ejPolyline": {
+			"prefix": "ejPolyline",
+			"body": [
+				"<polyline id=\"${1:pl1}\" points=\"${2:10},${3:10} ${4:30},${5:15} ${6:90},${7:50}\" filter=\"$8\">$9",
+				"</polyline>$10"
+			],
+			"description": "ejPolyline"
+		}, 
+	
+		"ejCircle": {
+			"prefix": "ejCircle",
+			"body": [
+				"<circle id=\"${1:c1}\" cx=\"${2:50}\" cy=\"${3:50}\" r=\"${4:15}\" filter=\"$5\">$7",
+				"</circle>$8"
+			],
+			"description": "ejCircle"
+		},
+	
+		"ejEllipse": {
+			"prefix": "ejEllipse",
+			"body": [
+				"<ellipse id=\"${1:e1}\" cx=\"${2:50}\" cy=\"${3:50}\" rx=\"${4:20}\" ry=\"${5:40}\" filter=\"$6\">$7",
+				"</elipse>$8"
+			],
+			"description": "ejEllipse"
+		},
+	
+		"ejRect": {
+			"prefix": "ejRect",
+			"body": [
+				"<rect id=\"${1:r1}\" x=\"${2:5}\" y=\"${3:5}\" width=\"${4:50}\" height=\"${5:20}\" filter=\"$6\">$7",
+				"</rect>$8"
+			],
+			"description": "ejRect"
+		},
+	
+		"ejPolygon": {
+			"prefix": "ejPolygon",
+			"body": [
+				"<polygon id=\"${1:pg1}\" points=\"${2:10},${3:10} ${4:20},${5:10} ${6:30},${7:30}\" filter=\"$8\">$9",
+				"</polygon>$10"
+			],
+			"description": "ejPolygon"
+		},
+	
+	//SVG Text//
+		"ejText": {
+			"prefix": "ejText",
+			"body": [
+			  "<text id=\"${1:t1}\" x=\"${2:10}\" y=\"${3:10}\" filter=\"$4\">${5:Ekrem Jasharaj}</text>"
+			],
+			"description": "ejText"
+		  },
+	
+	//SVG CSS Style//
+		"ejSTYLE": {
+			"prefix": "ejSTYLE",
+			"body": [
+				"<style>",
+				"  ${1:#r1}{",
+				"    fill: ${2:red};",
+				"    stroke: ${3:black};",
+				"    stroke-width: ${4:1%};",
+				"  }",
+				"</style>"		
+			],
+			"description": "ejSTYLE"
+		},
+	
+	//SVG Defs//
+		"ejDefs": {
+			"prefix": "ejDefs",
+			"body": [
+				"<defs>",
+				"  <filter id=\"${1:f1}\" width=\"${2:200%}\" height=\"${3:200%}\">",
+				"",
+				"  </filter>",
+				"</defs>"		
+			],
+			"description": "ejDefs"
+		},
+	
+	//SVG Filtes //
+		"ejFilter": {
+			"prefix": "ejFilter",
+			"body": [
+				"<filter id=\"${1:f1}\" width=\"${2:200%}\" height=\"${3:200%}\">",
+				"",
+				"</filter>"		
+			],
+			"description": "ejFilter"
+		},
+	
+		"ej-fe-DropShadow": {
+			"prefix": "ej-fe-DropShadow",
+			"body": [
+			  "<feDropShadow in=\"${1|SourceGraphic,SourceAlpha|}\" stdDeviation=\"${2:0.5} ${3:0.5}\" flood-color=\"${4:rgba(50,50,50,0.5)}\" result=\"${5:DropSHadowOut}\" />"
+			],
+			"description": "ej-fe-DropShadow"
+		},
+	
+		"ej-fe-Offset": {
+			"prefix": "ej-fe-Offset",
+			"body": [
+			  "<feOffset in=\"${1|SourceGraphic,SourceAlpha|}\" dx=\"${2:5}\" dy=\"${3:5}\" result=\"${4:OffseOut}\" />"
+			],
+			"description": "ej-fe-Offset"
+		},
+	
+		"ej-fe-GaussianBlur": {
+			"prefix": "ej-fe-GaussianBlur",
+			"body": [
+			  "<feGaussianBlur in=\"${1|SourceGraphic,SourceAlpha|}\" stdDeviation=\"${2:2} ${3:2}\" edgeMode=\"${4|none,duplicate,wrap|}\" result=\"${5:GaussianBlurOut}\" />"
+			],
+			"description": "ej-fe-GaussianBlur"
+		},
+	
+		"ej-fe-DisplacementMap": {
+			"prefix": "ej-fe-DisplacementMap",
+			"body": [
+			  "<feDisplacementMap in=\"${1|SourceGraphic,SourceAlpha|}\" in2=\"${2:SourceGraphic}\"  scale=\"${3:3}\" xChannelSelector=\"${4:R}\"  yChannelSelector=\"${5:B}\" result=\"${6:DisplacementMapOut}\" />"
+			],
+			"description": "ej-fe-DisplacementMap"
+		},
+		
+		"ej-fe-Morphology": {
+			"prefix": "ej-fe-Morphology",
+			"body": [
+			  "<feMorphology in=\"${1|SourceGraphic,SourceAlpha|}\" radius=\"${2:0.5} ${3:1}\" operator=\"${4|erode,dilate|}\" result=\"${5:MorphologyOut}\" />"
+			],
+			"description": "ej-fe-Morphology"
+		},
+	
+		"ej-fe-ColorMatrix": {
+			"prefix": "ej-fe-ColorMatrix",
+			"body": [
+			  "<feColorMatrix in=\"${1|SourceGraphic,SourceAlpha|}\" type=\"${2|matrx,saturate,hueRotate,luminanceToAlpha|}\" values=\"${3:5}\" result=\"${4:ColorMatrixOut}\" />"
+			],
+			"description": "ej-fe-ColorMatrix"
+		  },
+	
+		"ej-fe-Blend": {
+			"prefix": "ej-fe-Blend",
+			"body": [
+			  "<feBlend in=\"${1|SourceGraphic,SourceAlpha|}\" in2=\"${2:#id}\" mode=\"${3|normal,multiply,screen,darken,lighten,overlay,color-dodge,color-burn,hard-light,soft-light,difference,exclusion,hue,saturation,color,luminosity|}\" result=\"${4:BlendOut}\" />"
+			],
+			"description": "ej-fe-Blend"
+		  },
+
+		  "ej-fe-Turbulance": {
+			"prefix": "ej-fe-Turbulance",
+			"body": [
+			  "<feTurbulence type=\"${1|turbulence,fractalNoise|}\" baseFrequency=\"${2:0.015} ${3:0.1}\" numOctaves=\"${4:2}\" seed=\"${5:2}\" stitchTiles=\"${6|stitch,noStitch|}\" result=\"turbulence\"/>"
+			],
+			"description": "ej-fe-Turbulance"
+		  },
+
+		  "ej-fe-Composite": {
+			"prefix": "ej-fe-Composite",
+			"body": [
+			  "<feComposite in=\"${1|SourceGraphic,SourceAlpha|}\" in2=\"${2:#id}\" operator=\"${3|in,out,over,atop,xor,lighter,arithmetic|}\" result=\"composite\"/>"
+			],
+			"description": "ej-fe-Composite"
+		  },
+
+		  "ej-fe-Merge": {
+			"prefix": "ej-fe-Merge",
+			"body": [
+			  "<feMerge x=\"${1:0%}\" y=\"${2:0%}\" width=\"${3:100%}\" height=\"${4:100%}\" result=\"${5:merge1}\">",
+			  "  <feMergeNode in=\"${6:result1}\"/>",
+			  "  <feMergeNode in=\"${7:result2}\"/>",
+			  "</feMerge>"
+			],
+			"description": "ej-fe-Merge"
+		  },
+
+		  "ej-fe-ComponentTransfer": {
+			"prefix": "ej-fe-ComponentTransfer",
+			"body": [
+			  "<feComponentTransfer in=\"${1|SourceGraphic,SourceAlpha|}\" result=\"${2:componentTransfer}\">",
+			  "  <feFuncR type=\"${3|table,identity,discrete,linear,gamma|}\" tableValues=\"1 0 1\"/>",
+			  "  <feFuncG type=\"${4|table,identity,discrete,linear,gamma|}\" tableValues=\"0 1 0\"/>",
+			  "  <feFuncB type=\"${5|table,identity,discrete,linear,gamma|}\" tableValues=\"1 0 1\"/>",
+			  "  <feFuncA type=\"${6|table,identity,discrete,linear,gamma|}\" tableValues=\"0 0.5\"/>",
+			  " </feComponentTransfer>"
+			],
+			"description": "ej-fe-ComponentTransfer"
+		  },
+
+		  "ej-fe-Flood": {
+			"prefix": "ej-fe-Flood",
+			"body": [
+			  "<feFlood flood-color=\"${1:#FFCC99}\" flood-opacity=\"${2:0.7}\" result=\"${3:flood}\"/>"
+			],
+			"description": "ej-fe-Flood"
+		  },
+
+		  "ej-fe-Tile": {
+			"prefix": "ej-fe-Tile",
+			"body": [
+			  "<feTile x=\"0\" y=\"0\" width=\"1000\" height=\"1000\" in=\"${1|SourceGraphic,SourceAlpha|}\" result=\"${2:tile1}\"/>"
+			],
+			"description": "ej-fe-Tile"
+		  },
+
+		  "ej-fe-ConvolveMatrix": {
+			"prefix": "ej-fe-ConvolveMatrix",
+			"body": [
+			  "<feConvolveMatrix order=\"3 3\" kernelMatrix=\"-3 0 0 ",
+			  "                                               0 -3 0 ",
+			  "                                               0  0 4 \"",
+			  "divisor=\"1\" bias=\"1\" targetX=\"0\" targetY=\"0\" edgeMode=\"duplicate\" preserveAlpha=\"true\" in=\"${1|SourceGraphic,SourceAlpha|}\" result=\"convolveMatrix3\"/>"
+			],
+			"description": "ej-fe-ConvolveMatrix"
+		  },
+
+		  "ej-fe-Image": {
+			"prefix": "ej-fe-Image",
+			"body": [
+			  "  <feImage xlink:href=\"https://placekitten.com/500/500\" x=\"0\" y=\"0\" width=\"500\" height=\"500\" preserveAspectRatio=\"xMidYMid meet\" crossOrigin=\"anonymous\" result=\"image1\"/>"
+			],
+			"description": "ej-fe-Image"
+		  },
+	
+	//SVG Gradients
+		"ej-linearGradiant": {
+			"prefix": "ej-linearGradiant",
+			"body": [
+				"<linearGradient id=\"${1:lg1}\" x1=\"${2:0%}\" y1=\"${3:0%}\" x2=\"${4:0%}\" y2=\"${5:100%}\" >",
+					"<stop offset=\"${6:0%}\" style=\"stop-color:rgb(${7:255,0,0}); stop-opacity:${8:0}\" /> ",
+					"<stop offset=\"${9:100%}\" style=\"stop-color:rgb(${10:0,0,255}); stop-opacity:${11:1}\" />",
+				"</linearGradient>"
+			],
+			"description": "ej-linearGgadint"
+		},
+	
+		"ej-radialGradiant": {
+			"prefix": "ej-radialGradiant",
+			"body": [
+				"<radialGradient id=\"${1:rg1}\" cx=\"${2:50%}\" cy=\"${3:50%}\" r=\"${4:50%}\" fx=\"${5:50%}\" fy=\"${6:50%}\" >",
+					"<stop offset=\"${7:0%}\" style=\"stop-color:rgb(${8:255,0,0}); stop-opacity:${9:0}\" /> ",
+					"<stop offset=\"${10:100%}\" style=\"stop-color:rgb(${11:0,0,255}); stop-opacity:${12:1}\" />",
+				"</radialGradient>"
+			],
+			"description": "ej-radialGgadint"
+		},
+
+	//SVG Lights
+		"ej-fe-SpecularLighting-feDistantLight": {
+			"prefix": "ej-fe-SpecularLighting-feDistantLight",
+			"body": [
+			  "<feSpecularLighting surfaceScale=\"${1:5}\" specularConstant=\"${2:0.75}\" specularExponent=\"${3:20}\" lighting-color=\"${4:#BBF900}\" in=\"${5|SourceGraphic,SourceAlpha|}\" result=\"${6:specularLightingDistantLight1}\">",
+			  "  <feDistantLight azimuth=\"3\" elevation=\"100\"/>",
+			  "</feSpecularLighting>"
+			],
+			"description": "ej-fe-SpecularLighting-feDistantLight"
+		  },
+
+		  "ej-fe-SpecularLighting-fePoinLight": {
+			"prefix": "ej-fe-SpecularLighting-fePointLight",
+			"body": [
+			  "<feSpecularLighting surfaceScale=\"${1:5}\" specularConstant=\"${2:0.75}\" specularExponent=\"${3:20}\" lighting-color=\"${4:#BBF900}\" in=\"${5|SourceGraphic,SourceAlpha|}\" result=\"${6:specularLightingPointLight1}\">",
+			  "  <fePointLight x=\"${7:20}\" y=\"${8:15}\" z=\"${9:20}\" />",
+			  "</feSpecularLighting>"
+			],
+			"description": "ej-fe-SpecularLighting-fePointLight"
+		  },
+
+		  "ej-fe-SpecularLighting-feSpotLigh": {
+			"prefix": "ej-fe-SpecularLighting-feSpotLigh",
+			"body": [
+			  "<feSpecularLighting surfaceScale=\"${1:5}\" specularConstant=\"${2:0.75}\" specularExponent=\"${3:20}\" lighting-color=\"${4:#BBF900}\" in=\"${5|SourceGraphic,SourceAlpha|}\" result=\"${6:specularLightingSpotLight1}\">",
+			  "  <feSpotLight x=\"${7:35}\" y=\"${8:25}\" z=\"${9:20}\" pointsAtX=\"${10:0}\" pointsAtY=\"${11:0}\" pointsAtZ=\"${12:0}\" specularExponent=\"${13:1}\" limitingConeAngle=\"${14:60}\"/>",
+			  "</feSpecularLighting>"
+			],
+			"description": "ej-fe-SpecularLighting-feSpotLigh"
+		  },
+
+		  "ej-fe-DiffuseLighting-feDistantLight": {
+			"prefix": "ej-fe-DiffuseLighting-feDistantLight",
+			"body": [
+			  "<feDiffuseLighting surfaceScale=\"${1:5}\" diffuseConstant=\"${2:0.75}\" lighting-color=\"${3:#BBF900}\" in=\"${4|SourceGraphic,SourceAlpha|}\" result=\"${5:diffuseDistantLighting1}\">",
+			  "  <feDistantLight azimuth=\"${6:3}\" elevation=\"${7:100}\"/>",
+			  "</feDiffuseLighting>"
+			],
+			"description": "ej-fe-DiffuseLighting-feDistantLight"
+		  },
+
+		  "ej-fe-DiffuseLighting-fePointLight": {
+			"prefix": "ej-fe-DiffuseLighting-fePointLight",
+			"body": [
+			  "<feDiffuseLighting surfaceScale=\"${1:5}\" diffuseConstant=\"${2:0.75}\" lighting-color=\"${3:#BBF900}\" in=\"${4|SourceGraphic,SourceAlpha|}\" result=\"${5:diffusePointLighting1}\">",
+			  "  <fePointLight x=\"${6:20}\" y=\"${7:15}\" z=\"${8:20}\" />",
+			  "</feDiffuseLighting>"
+			],
+			"description": "ej-fe-DiffuseLighting-fePointight"
+		  },
+
+		  "ej-fe-DiffuseLighting-feSpotLight": {
+			"prefix": "ej-fe-DiffuseLighting-feSpotLight",
+			"body": [
+			  "<feDiffuseLighting surfaceScale=\"${1:5}\" diffuseConstant=\"${2:0.75}\" lighting-color=\"${3:#BBF900}\" in=\"${4|SourceGraphic,SourceAlpha|}\" result=\"${5:diffuseSpotLighting1}\">",
+			  "  <feSpotLight x=\"${6:35}\" y=\"${7:25}\" z=\"${8:20}\" pointsAtX=\"${9:0}\" pointsAtY=\"${10:0}\" pointsAtZ=\"${11:0}\" specularExponent=\"${12:1}\" limitingConeAngle=\"${13:60}\"/>",
+			  "</feDiffuseLighting>"
+			],
+			"description": "ej-fe-DiffuseLighting-feSpotight"
+		  },
+	//SVG Animations
+
+	"ej-SVG-Animation-Set": {
+		"prefix": "ej-SVG-Animation-Set",
+		"body": [
+		  "<set attributeName=\"${1:r}\" attributeType=\"XML\"",
+		  "  to=\"${2:100}\"",
+		  "  begin=\"${3|1s,shape#id.click|}\" />"
+		],
+		"description": "ej-AVG-Animation-Set"
+	  },
+
+	  "ej-SVG-Animation-Animate": {
+		"prefix": "ej-SVG-Animation-Animate",
+		"body": [
+		  "<animate attributeName=\"${1:cx}\" attributeType=\"XML\"",
+		  "  from=\"${2:50}\"  to=\"${3:100}\"",
+		  "  begin=\"${4|0s,shape#id.click|}\" dur=\"${5:3s}\"",
+		  "  fill=\"${6|remove,freeze|}\"  repeatCount=\"${7|indefinite,3|}\" />"
+		],
+		"description": "ej-SVG-Animation-Animate"
+	  },
+
+	  "ej-SVG-Animation-AnimateTransform": {
+		"prefix": "ej-SVG-Animation-AnimateTransform",
+		"body": [
+		  "<animateTransform attributeName=\"transform\"",
+		  "  type=\"${1|rotate,scale|}\"",
+		  "  from=\"${2:0} ${3:100} ${4:100}\"  to=\"${5:360} ${6:100} ${7:100}\"",
+		  "  begin=\"${8|0s,shape#id.click|}\" dur=\"${9:3s}\"",
+		  "  fill=\"${10|remove,freeze|}\"  repeatCount=\"${11|indefinite,3|}\" />"
+		],
+		"description": "ej-SVG-Animation-AnimateTransform"
+	  },
+
+	  "ej-SVG-Animation-AnimateMotion": {
+		"prefix": "ej-SVG-Animation-AnimateMotion",
+		"body": [
+		  "<animateMotion attributeName=\"transform\"",
+		  "  path=\"M${1:5},${2:5} q${3:30},${4:20} ${5:50},${6:40} q${7:60},${8:-50} ${9:100} ${10:0}\"",
+		  "  begin=\"${11|0s,shape#id.click|\" dur=\"${12:3}s\"",
+		  "  fill=\"${13|remove,freeze|}\"  repeatCount=\"${14|indefinite,3|}\"",
+		  "  !rotate=\"${15:auto}\" />"
+		],
+		"description": "ej-SVG-Animation-AnimateMotion"
+	  }	
+	}	
